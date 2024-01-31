@@ -44,11 +44,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (OnGround)
         {
-            rb.velocity = transform.up * JumpVelocity;
+            rb.velocity += transform.up * JumpVelocity;
         }
         else if (CanDoubleJump) //implement double jump
         {
-            rb.velocity = transform.up * JumpVelocity;
+            rb.velocity += transform.up * JumpVelocity;
             CanDoubleJump = false;
         }
         else
